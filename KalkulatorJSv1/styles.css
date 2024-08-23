@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.calculator {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    display: none;
+}
+
+.calculator.active {
+    display: block;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #f3f4f6;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    text-align: right;
+    overflow: hidden;
+}
+
+.display input {
+    width: 100%;
+    border: none;
+    background: none;
+    font-size: 30px;
+    text-align: right;
+    outline: none;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.display div {
+    font-size: 36px;
+    margin-top: 10px;
+    color: #333;
+    overflow-wrap: break-word; /* Allows breaking long words */
+    word-wrap: break-word; /* For older browsers */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    background-color: #4c8df5;
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #356ac0;
+}
+
+button:nth-child(4n) {
+    background-color: #ffba08;
+}
+
+button:nth-child(4n):hover {
+    background-color: #e09c00;
+}
+
+#basic-display, #trig-display {
+    width: 100%;
+    border: none;
+    background: none;
+    font-size: 30px;
+    text-align: right;
+    outline: none;
+    color: #333;
+}
+
+#basic-result, #trig-result {
+    font-size: 36px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.tabs {
+    text-align: center;
+}
+
+.tab-button {
+    background-color: #4c8df5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.tab-button:hover {
+    background-color: #356ac0;
+}
